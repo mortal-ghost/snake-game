@@ -148,3 +148,18 @@ class SnakeGame:
                 or self.head.x < 0 
                 or self.head.y > self.height - BLOCK_SIZE
                 or self.head.y < 0) or (self.head in self.snake[1:])
+
+                
+
+if __name__ == "__main__":
+    Game = SnakeGame()
+    
+    while True:
+        game_over, score = Game.play()
+
+        if (game_over):
+            break
+
+    print(f'Game over! Your score is {score}')
+
+    pygame.quit()
